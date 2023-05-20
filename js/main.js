@@ -1,21 +1,3 @@
-const searchEl = document.querySelector('.search');
-// searchEl안의 input요소를 찾음
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
 
 const badgeEl = document.querySelector('header .badges');
 // const toTopEl = document.querySelector('#to-top'); 요소를 찾아서 넣을 수 있지만 직접 선택자를 gsap.to()메소드 안에 넣어도 됨
@@ -147,5 +129,3 @@ spyEls.forEach(function (spyEl) {
 })
 
 
-const thisYear = document.querySelector('.this-year')
-thisYear.textContent = new Date().getFullYear();
